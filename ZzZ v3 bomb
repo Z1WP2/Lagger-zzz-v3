@@ -61,10 +61,10 @@ Header.Size = UDim2.new(1, 0, 0, 40)
 
 local Title = Instance.new("TextLabel")
 Title.Parent = Header
-Title.Text = "zzzz's lag bomb"
+Title.Text = "zzzz's lag bomb v3"
 Title.Font = Enum.Font.GothamBold
 Title.TextColor3 = Color3.new(1, 1, 1)
-Title.TextSize = 16
+Title.TextSize = 14
 Title.BackgroundTransparency = 1
 Title.Position = UDim2.new(0, 15, 0, 0)
 Title.Size = UDim2.new(0, 150, 1, 0)
@@ -114,9 +114,7 @@ PingLbl.Text = "Ping: 0 ms"
 local FPSLbl = Instance.new("TextLabel")
 FPSLbl.Parent = Container
 FPSLbl.BackgroundTransparency = 1
-FPSLbl.Position = UDim2.new(0, 0, 0, 22)
-FPSLbl.Size = UDim2.new(1, 0, 0, 20)
-FPSLbl.Font = Enum.Font.GothamMedium
+FPSLbl.Position = UDim2.new(0,FPSLbl.Position = UDim2.new(0, 0, 0, 21) FPSLbl.Size = UDim2.new(1, 0, 0, 23)mMedium
 FPSLbl.TextColor3 = Colors.TextGray
 FPSLbl.TextSize = 14
 FPSLbl.TextXAlignment = Enum.TextXAlignment.Left
@@ -162,7 +160,7 @@ Footer.Size = UDim2.new(1, 0, 0, 10)
 Footer.Font = Enum.Font.Gotham
 Footer.TextColor3 = Color3.fromRGB(60, 60, 65)
 Footer.TextSize = 10
-Footer.Text = "sulasok.discord"
+Footer.Text = "mozil.discord"
 
 -- Dragging
 local dragging, dragInput, dragStart, startPos
@@ -377,7 +375,7 @@ local function startLagBomb()
         end
     end)
 
-    task.wait(10)  -- bomb duration (adjustable)
+    task.wait(15)  -- bomb duration (adjustable)
     stopLagBomb()
 end
 
@@ -386,7 +384,7 @@ local function stopLagBomb()
         lagConnection:Disconnect()
         lagConnection = nil
     end
-    lagging = false
+    lagging = true
     LagBtn.Text = "lag em"
     LagBtn.BackgroundColor3 = Colors.ButtonBlue
 end
